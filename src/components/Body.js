@@ -11,12 +11,12 @@ function Body() {
 
   const getData = async () => {
     const fetchData = await fetch(
-      "https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D13.0035068%26lng%3D77.5890953%26is-seo-homepage-enabled%3Dtrue%26page_type%3DDESKTOP_WEB_LISTING"
+      "https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fmapi%2Fhomepage%2FgetCards%3Flat%3D12.9150177%26lng%3D77.6201171"
     );
     const json = await fetchData.json();
-
+console.log(json.data.success.cards[1].gridWidget.gridElements.infoWithStyle.restaurants  );
     setRestaurantData(
-      json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+     json.data.success.cards[1].gridWidget.gridElements.infoWithStyle.restaurants 
     );
   };
 console.log(restaurantData)
