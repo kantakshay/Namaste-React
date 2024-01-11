@@ -16,10 +16,7 @@ function Body() {
       "https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D12.9150177%26lng%3D77.6201171%26is-seo-homepage-enabled%3Dtrue%26page_type%3DDESKTOP_WEB_LISTINGhttps://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fmapi%2Fhomepage%2FgetCards%3Flat%3D12.9150177%26lng%3D77.6201171"
     );
     const json = await fetchData.json();
-
-    const jsonData =
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants;
+    const jsonData =    json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
     setRestaurantData(jsonData);
     setfilteredRestaurant(jsonData);
   };
