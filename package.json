@@ -2,10 +2,11 @@
   "name": "inception",
   "version": "1.0.0",
   "description": "Namaste-React ",
-  "main": "app.js",
+ 
   "scripts": {
     "test": "jest",
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/kantakshay/namaste-react#readme",
   "dependencies": {
+    "@swc/helpers": "^0.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1"
