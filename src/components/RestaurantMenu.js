@@ -19,16 +19,16 @@ const resData = useRestaurantMenu(resid)
   return resData === null ? (
     <Shimmer />
   ) : (
-    <div className="menu">
+    <div className="mx-48 ">
       <div>
-        <h4>{name}</h4>
+        <h4 className="font-medium text-2xl">{name}</h4>
         {areaName},{locality}
       </div>
       <p>&#9733;{avgRating}</p>
       <h3>Menu</h3>
       <div>
         {resMenuItemes.map((items) => (
-          <li key={items.card.info.id}>{items.card.info.name}</li>
+          <li className="list-none my-6" key={items.card.info.id}>{items.card.info.name}</li>
         ))}
       </div>
     </div>
